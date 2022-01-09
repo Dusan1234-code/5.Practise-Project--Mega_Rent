@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  color: gray;
+}
+
+.container {
+  max-width: 960px;
+  margin-inline: auto;
+}
+
+.naslovSekcije {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+main section {
+  padding: 3rem;
+}
+
+.logo span {
+  color: #ff2e2e;
+}
+
+header {
+  background-image: url("../slike/background.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50rem;
+  padding-top: 2rem;
+}
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0.4rem 0.8rem;
+  background-color: white;
+  width: 80%;
+  margin-inline: auto;
+  position: relative;
+}
+header nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+header nav ul a {
+  text-decoration: none;
+  color: gray;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+}
+header .header-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+header .header-text h1 {
+  border-bottom: 1px solid #ff2e2e;
+  font-size: 4rem;
+}
+
+main .section-cards {
+  background-color: #dbdbdb;
+}
+main .section-cards .grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  margin-top: 3rem;
+  gap: 2rem;
+}
+main .section-cards .grid .grid-item {
+  text-align: center;
+}
+main .section-cards .grid .grid-item img {
+  width: 100%;
+}
+main .section-cards .grid .grid-item .btn {
+  display: inline-block;
+  padding: 0.4rem 2rem;
+  background-color: #ff2e2e;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+main .section-table table {
+  border-collapse: collapse;
+  margin-top: 4rem;
+  margin-inline: auto;
+}
+main .section-table table td,
+main .section-table table th {
+  padding: 2rem 5rem;
+}
+main .section-table table tr {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+main .section-table table thead {
+  color: white;
+  background-color: #ff2e2e;
+}
+main .section-table table thead tr th:first-child {
+  background-color: #990101;
+}
+main .section-table table tbody tr td:first-child {
+  color: black;
+  background-color: #c7c7c7;
+}
+
+footer {
+  background-color: #131313;
+  color: white;
+  padding: 2rem;
+}
+footer .logo {
+  color: #575757;
+  border-bottom: 1px solid #ff2e2e;
+  width: 100%;
+}
+footer .flex {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0.6rem 3rem;
+}
+footer .flex .flex-item ul {
+  list-style: none;
+}
+footer .flex .flex-item iframe {
+  width: 35rem;
+  height: 30rem;
+}
+
+/*# sourceMappingURL=style.css.map */

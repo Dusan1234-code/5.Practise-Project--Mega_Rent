@@ -1,0 +1,147 @@
+@import "general.scss";
+@import "mixin.scss";
+@import "vars.scss";
+
+// ******************
+// ****** HEADER ***********
+// ************************
+
+header {
+  background-image: url("../slike/background.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50rem;
+  padding-top: 2rem;
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0.4rem 0.8rem;
+    background-color: white;
+    width: 80%;
+    margin-inline: auto;
+    position: relative;
+
+    ul {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      a {
+        text-decoration: none;
+        color: gray;
+        text-transform: uppercase;
+        font-size: 1.4rem;
+      }
+    }
+  }
+  .header-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    h1 {
+      border-bottom: 1px solid $crvena;
+      font-size: 4rem;
+    }
+  }
+}
+
+main {
+  // ******************
+  // ****** CARDS ***********
+  // ************************
+  .section-cards {
+    background-color: $siva;
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      align-items: center;
+      margin-top: 3rem;
+      gap: 2rem;
+      .grid-item {
+        text-align: center;
+        img {
+          width: 100%;
+        }
+        .btn {
+          display: inline-block;
+          padding: 0.4rem 2rem;
+          background-color: $crvena;
+          color: white;
+          text-align: center;
+          text-decoration: none;
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+  // ******************
+  // ****** TABLE ***********
+  // ************************
+  .section-table {
+    table {
+      border-collapse: collapse;
+      margin-top: 4rem;
+      margin-inline: auto;
+      td,
+      th {
+        padding: 2rem 5rem;
+      }
+      tr {
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+      }
+      thead {
+        color: white;
+        background-color: $crvena;
+        tr {
+          th:first-child {
+            background-color: rgb(153, 1, 1);
+          }
+        }
+      }
+      tbody {
+        tr {
+          td:first-child {
+            color: black;
+            background-color: rgb(199, 199, 199);
+          }
+        }
+      }
+    }
+  }
+}
+
+// ******************
+// ****** FOOTER ***********
+// ************************
+
+footer {
+  background-color: $crna;
+  color: white;
+  padding: 2rem;
+  .logo {
+    color: rgb(87, 87, 87);
+    border-bottom: 1px solid $crvena;
+    width: 100%;
+  }
+  .flex {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0.6rem 3rem;
+    .flex-item {
+      ul {
+        list-style: none;
+      }
+      iframe {
+        width: 35rem;
+        height: 30rem;
+      }
+    }
+  }
+}
