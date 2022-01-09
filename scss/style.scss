@@ -13,6 +13,10 @@ header {
   background-size: cover;
   height: 50rem;
   padding-top: 2rem;
+  @include mobile {
+    background-image: none;
+    background-color: $crna;
+  }
   nav {
     display: flex;
     align-items: center;
@@ -22,11 +26,31 @@ header {
     width: 80%;
     margin-inline: auto;
     position: relative;
-
+    @include tablet {
+      width: 95%;
+    }
+    @include mobile {
+      flex-direction: column;
+    }
+    .logo {
+      @include mobile {
+        align-self: flex-start;
+      }
+      span {
+        font-weight: bold;
+      }
+      h2 {
+        font-family: "Raleway", sans-serif;
+      }
+    }
     ul {
       display: flex;
       gap: 2rem;
       list-style: none;
+      @include mobile {
+        flex-direction: column;
+        text-align: center;
+      }
       a {
         text-decoration: none;
         color: gray;
@@ -42,9 +66,19 @@ header {
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
+    @include tablet {
+      top: 35%;
+    }
+    @include mobile {
+      top: 60%;
+      width: 90%;
+    }
     h1 {
       border-bottom: 1px solid $crvena;
       font-size: 4rem;
+      @include tablet {
+        font-size: 3.4rem;
+      }
     }
   }
 }
@@ -62,10 +96,22 @@ main {
       align-items: center;
       margin-top: 3rem;
       gap: 2rem;
+      @include tablet {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @include mobile {
+        grid-template-columns: 1fr;
+      }
       .grid-item {
         text-align: center;
         img {
           width: 100%;
+          @include tablet {
+            width: 80%;
+          }
+          @include mobile {
+            width: 60%;
+          }
         }
         .btn {
           display: inline-block;
@@ -75,6 +121,12 @@ main {
           text-align: center;
           text-decoration: none;
           margin-top: 1rem;
+          @include tablet {
+            width: 50%;
+          }
+          @include mobile {
+            padding: 2rem;
+          }
         }
       }
     }
@@ -87,9 +139,15 @@ main {
       border-collapse: collapse;
       margin-top: 4rem;
       margin-inline: auto;
+      @include mobile {
+        display: none;
+      }
       td,
       th {
         padding: 2rem 5rem;
+        @include tablet {
+          padding: 1rem 3.5rem;
+        }
       }
       tr {
         border-top: 1px solid black;
@@ -97,7 +155,8 @@ main {
       }
       thead {
         color: white;
-        background-color: $crvena;
+        background-color: $tamnocrveno;
+
         tr {
           th:first-child {
             background-color: rgb(153, 1, 1);
@@ -111,6 +170,26 @@ main {
             background-color: rgb(199, 199, 199);
           }
         }
+      }
+    }
+  }
+
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .btn {
+      text-decoration: none;
+      padding: 2rem 5rem;
+      display: inline-block;
+      text-align: center;
+      width: 50%;
+      background-color: $crvena;
+      color: white;
+      opacity: 0;
+      @include mobile {
+        opacity: 1;
+        margin-top: 3rem;
       }
     }
   }
@@ -128,15 +207,30 @@ footer {
     color: rgb(87, 87, 87);
     border-bottom: 1px solid $crvena;
     width: 100%;
+    @include tablet {
+      text-align: center;
+    }
+    h3 {
+      font-family: "Raleway", sans-serif;
+    }
   }
   .flex {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     padding: 0.6rem 3rem;
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+    }
     .flex-item {
       ul {
         list-style: none;
+        @include tablet {
+          margin-top: 2rem;
+        }
       }
       iframe {
         width: 35rem;

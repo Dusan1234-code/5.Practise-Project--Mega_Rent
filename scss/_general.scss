@@ -12,7 +12,8 @@ html {
 
 body {
   font-size: 1.6rem;
-  color: gray;
+  color: #797979;
+  font-family: "Open Sans", sans-serif;
 }
 
 .container {
@@ -32,6 +33,7 @@ main {
 }
 
 .logo {
+  font-weight: 800;
   span {
     color: $crvena;
   }

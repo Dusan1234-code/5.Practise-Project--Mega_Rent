@@ -10,7 +10,8 @@ html {
 
 body {
   font-size: 1.6rem;
-  color: gray;
+  color: #797979;
+  font-family: "Open Sans", sans-serif;
 }
 
 .container {
@@ -27,8 +28,11 @@ main section {
   padding: 3rem;
 }
 
+.logo {
+  font-weight: 800;
+}
 .logo span {
-  color: #ff2e2e;
+  color: #ff3720;
 }
 
 header {
@@ -38,6 +42,12 @@ header {
   background-size: cover;
   height: 50rem;
   padding-top: 2rem;
+}
+@media (max-width: 650px) {
+  header {
+    background-image: none;
+    background-color: #131313;
+  }
 }
 header nav {
   display: flex;
@@ -49,10 +59,37 @@ header nav {
   margin-inline: auto;
   position: relative;
 }
+@media (max-width: 960px) {
+  header nav {
+    width: 95%;
+  }
+}
+@media (max-width: 650px) {
+  header nav {
+    flex-direction: column;
+  }
+}
+@media (max-width: 650px) {
+  header nav .logo {
+    align-self: flex-start;
+  }
+}
+header nav .logo span {
+  font-weight: bold;
+}
+header nav .logo h2 {
+  font-family: "Raleway", sans-serif;
+}
 header nav ul {
   display: flex;
   gap: 2rem;
   list-style: none;
+}
+@media (max-width: 650px) {
+  header nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 header nav ul a {
   text-decoration: none;
@@ -68,9 +105,25 @@ header .header-text {
   text-align: center;
   color: white;
 }
+@media (max-width: 960px) {
+  header .header-text {
+    top: 35%;
+  }
+}
+@media (max-width: 650px) {
+  header .header-text {
+    top: 60%;
+    width: 90%;
+  }
+}
 header .header-text h1 {
-  border-bottom: 1px solid #ff2e2e;
+  border-bottom: 1px solid #ff3720;
   font-size: 4rem;
+}
+@media (max-width: 960px) {
+  header .header-text h1 {
+    font-size: 3.4rem;
+  }
 }
 
 main .section-cards {
@@ -83,29 +136,70 @@ main .section-cards .grid {
   margin-top: 3rem;
   gap: 2rem;
 }
+@media (max-width: 960px) {
+  main .section-cards .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 650px) {
+  main .section-cards .grid {
+    grid-template-columns: 1fr;
+  }
+}
 main .section-cards .grid .grid-item {
   text-align: center;
 }
 main .section-cards .grid .grid-item img {
   width: 100%;
 }
+@media (max-width: 960px) {
+  main .section-cards .grid .grid-item img {
+    width: 80%;
+  }
+}
+@media (max-width: 650px) {
+  main .section-cards .grid .grid-item img {
+    width: 60%;
+  }
+}
 main .section-cards .grid .grid-item .btn {
   display: inline-block;
   padding: 0.4rem 2rem;
-  background-color: #ff2e2e;
+  background-color: #ff3720;
   color: white;
   text-align: center;
   text-decoration: none;
   margin-top: 1rem;
+}
+@media (max-width: 960px) {
+  main .section-cards .grid .grid-item .btn {
+    width: 50%;
+  }
+}
+@media (max-width: 650px) {
+  main .section-cards .grid .grid-item .btn {
+    padding: 2rem;
+  }
 }
 main .section-table table {
   border-collapse: collapse;
   margin-top: 4rem;
   margin-inline: auto;
 }
+@media (max-width: 650px) {
+  main .section-table table {
+    display: none;
+  }
+}
 main .section-table table td,
 main .section-table table th {
   padding: 2rem 5rem;
+}
+@media (max-width: 960px) {
+  main .section-table table td,
+main .section-table table th {
+    padding: 1rem 3.5rem;
+  }
 }
 main .section-table table tr {
   border-top: 1px solid black;
@@ -113,7 +207,7 @@ main .section-table table tr {
 }
 main .section-table table thead {
   color: white;
-  background-color: #ff2e2e;
+  background-color: #e42b15;
 }
 main .section-table table thead tr th:first-child {
   background-color: #990101;
@@ -121,6 +215,27 @@ main .section-table table thead tr th:first-child {
 main .section-table table tbody tr td:first-child {
   color: black;
   background-color: #c7c7c7;
+}
+main .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .button .btn {
+  text-decoration: none;
+  padding: 2rem 5rem;
+  display: inline-block;
+  text-align: center;
+  width: 50%;
+  background-color: #ff3720;
+  color: white;
+  opacity: 0;
+}
+@media (max-width: 650px) {
+  main .button .btn {
+    opacity: 1;
+    margin-top: 3rem;
+  }
 }
 
 footer {
@@ -130,8 +245,16 @@ footer {
 }
 footer .logo {
   color: #575757;
-  border-bottom: 1px solid #ff2e2e;
+  border-bottom: 1px solid #ff3720;
   width: 100%;
+}
+@media (max-width: 960px) {
+  footer .logo {
+    text-align: center;
+  }
+}
+footer .logo h3 {
+  font-family: "Raleway", sans-serif;
 }
 footer .flex {
   display: flex;
@@ -139,8 +262,21 @@ footer .flex {
   justify-content: space-between;
   padding: 0.6rem 3rem;
 }
+@media (max-width: 960px) {
+  footer .flex {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+  }
+}
 footer .flex .flex-item ul {
   list-style: none;
+}
+@media (max-width: 960px) {
+  footer .flex .flex-item ul {
+    margin-top: 2rem;
+  }
 }
 footer .flex .flex-item iframe {
   width: 35rem;
