@@ -1,2 +1,3 @@
 # 5.Practise-Project--Mega_Rent
-Responsive single page website for local Rent-a car.
+
+Whole project code is on master branch. Responsive single page website for local Rent-a car.
